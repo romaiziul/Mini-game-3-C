@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar minigame raylib",
+            "type": "shell",
+            "command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "PATH": "C:\\msys64\\mingw64\\bin;C:\\msys64\\usr\\bin;${env:PATH}"
+                }
+            },
+            "args": [
+                "minigame-1.c",
+                "-Wall",
+                "-Wextra",
+                "-g3",
+                "-IC:\\msys64\\mingw64\\include",
+                "-LC:\\msys64\\mingw64\\lib",
+                "-o",
+                "output\\minigame-1.exe",
+                "-lraylib",
+                "-lglfw3",
+                "-lopengl32",
+                "-lgdi32",
+                "-lwinmm"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
